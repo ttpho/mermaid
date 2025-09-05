@@ -45,8 +45,8 @@ const convertSvgToPng = async (svgElement) => {
         img.onload = () => {
             // Step 4: Create a temporary canvas and draw the SVG image onto it
             const canvas = document.createElement('canvas');
-            canvas.width = img.naturalWidth * 1024;
-            canvas.height = img.naturalHeight * 1024;
+            canvas.width = 2048;
+            canvas.height = 2048;
             const ctx = canvas.getContext('2d');
             ctx.drawImage(img, 0, 0);
 
