@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid.js Live Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mermaid.js Live Editor</h1>
+        <p>Write your diagram code in the editor and see the live preview below.</p>
+    </header>
+    <main>
+        <div class="editor-container">
+            <textarea id="mermaid-code" placeholder="Enter your Mermaid.js code here...">
+graph TD;
+    A --> B(Process);
+    B --> C{Decision};
+    C --> D[End A];
+    C --> E;
+            </textarea>
+        </div>
+        <div class="preview-container">
+            <div id="mermaid-preview" class="mermaid-diagram"></div>
+        </div>
+    </main>
+    <footer>
+        <button id="download-button">Download as PNG</button>
+    </footer>
+    
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        
+        // This is a placeholder; the main application logic is in script.js
+        window.mermaid = mermaid;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
